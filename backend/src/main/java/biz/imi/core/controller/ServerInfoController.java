@@ -19,7 +19,7 @@ public class ServerInfoController {
     
     @GetMapping("/info")
     public ServerInfoDTO getServerInfo() {
-        // Используем сервис для получения данных
+       
         String appName = infoServerService.getApplicationName();
         String serverPort = infoServerService.getServerPort();
 
