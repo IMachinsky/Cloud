@@ -8,6 +8,7 @@ export default function HomePage() {
     return (
         <div>
             <Button onClick={() => navigate("/s3")}>Хранилище S3</Button>
+            <Button onClick={() => navigate("/info")}>Узнать имя и порт сервера</Button>
             <Button onClick={() => navigate("/vision")}>Распознование изображений </Button>
         </div>
     )
