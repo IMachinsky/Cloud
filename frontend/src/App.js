@@ -19,6 +19,7 @@ class App extends Component {
                   <Route path='/files/:bucket' element={<Appendix/>}/>
                   <Route path='/s3' element={<S3Storage/>}/>
                   <Route path='/vision' element={<OcrVision/>}/>
+                  <Route path='/info' element={<ServerName />} />
                   <Route path="*" element={<PageNotFound/>} />
               </Routes>
                 </div>
