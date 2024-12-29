@@ -14,22 +14,22 @@ import org.springframework.http.MediaType;
 public class ServerInfoController {
 
     @Autowired
-    private InfoServerService infoServerService;  // Внедряем сервис
+    private InfoServerService infoServerService; 
 
-    // Эндпоинт для получения информации о сервере
+    
     @GetMapping("/info")
     public ServerInfoDTO getServerInfo() {
         // Используем сервис для получения данных
         String appName = infoServerService.getApplicationName();
         String serverPort = infoServerService.getServerPort();
 
-        // Возвращаем DTO объект, который автоматически будет преобразован в JSON
+        
         return new ServerInfoDTO(appName, serverPort);
     }
 
-    // DTO класс для информации о сервере
+    
         public record ServerInfoDTO(String applicationName, String serverPort) {
 
-        // Конструктор
+        
     }
 }
